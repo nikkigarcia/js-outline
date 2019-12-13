@@ -95,6 +95,6 @@ anyting between the foward slash and astrick is a multiline comment
 // async remembers variables and remembers functions and variables
 
 /**
- * The this keyword refers to the current object.
+ * The 'this' keyword refers to the current object.
 Note that this is not a variable. It is a keyword, and its value cannot be changed.
  */
