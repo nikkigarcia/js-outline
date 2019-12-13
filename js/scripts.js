@@ -26,8 +26,10 @@ console.log(welcome);
 
 // Array
 var fruits = ['apples', 'grapes', 'oranges', 'bananas'];
+var rockBand = ['Pantera', 'Jonas Brothers', 'Tool', 'Nickleback'];
 
 console.log(fruits);
+console.log(rockBand);
 
 // Object
 
