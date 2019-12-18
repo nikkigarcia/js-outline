@@ -53,7 +53,7 @@ console.log(present);
 
 // Undefined
 
-var cat = 
+var cat = "jim's";
 console.log(cat);
 
 // Null
@@ -91,6 +91,11 @@ anyting between the foward slash and astrick is a multiline comment
 */
 
 // document.write(); will display variable on webpage
+
+document.write('Hello World!');
+
+var favoriteMovie = 'My favorite movie is Bruce Almighty';
+document.write(favoriteMovie);
 
 // async remembers variables and remembers functions and variables
 
