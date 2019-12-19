@@ -112,3 +112,9 @@ p{
   .copy{
       color: white;
   }
+
+  /* event listener */
+  #quote { 
+      color: aqua;
+}
+  

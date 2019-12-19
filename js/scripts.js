@@ -103,3 +103,70 @@ document.write(favoriteMovie);
  * The 'this' keyword refers to the current object.
 Note that this is not a variable. It is a keyword, and its value cannot be changed.
  */
+
+// Event Listeners
+var quote = document.querySelector("#quote"); 
+var prev= document.querySelector("#prev"); 
+var newquote = document.querySelector("#next");
+var n = 0;
+var quotelist = [
+"Slow progress is better than no progress", 
+"If you cannot accept it, change it. If you cannot change it, accept it", 
+"Your time is limited. So, don't waste it living some else's life", 
+"The bridge between dream and reality is work!!", "Everything is hard before it is easy", "Everybody likes a compliment", 
+"Never ever give up!!", "In this fast world, the best way to survive is not be emotionally atteched with anyone",
+"Never compare yourself with anybody. With this, you are insulting yourself", "Have a courage to follow your heart and intuition because they somehow already know what you truely want to be. Everything else is secondary", "Be emotionless", "Start small, do big", "Impossible, baby, is nothing", "Obsession is necessity", "Understand that you are an uncommon breed", "Kill your fear otherwise your fear will kill you", "Sometime life will throw a brick on your head. But, don't lose faith", "Be the best, \n, fuck the rest", "Smile! It confuses your enemy", "All will be willing to be your friend when you hve something they want", "They watch, /n They hate, /n They copy!", "The goal is not to live forever, it is to create that will"];
+
+var backquote = quotelist.reverse; 
+
+newquote.addEventListener("click", function(){
+
+  if (n < 100) {
+  quote.textContent = quotelist[n];
+  n++;
+  } else {
+    quote.textContent = quotelist[n];
+    n = 0;}
+});
+prev.addEventListener("click", 
+                      function() { 
+  if (n<100) { 
+    quote.textContent = quotelist[n]; 
+    n--; } 
+  else { 
+    quote.textContent = quotelist[n]; 
+    n = 0;} 
+});
+
+
+
+
+//  for loops
+
+ var textMessages = ['wyd', 'xmas shopping', 'do you want to meet for dinner?', 'yea lets go to Panda'];
+ var i;
+
+ for(i=0; i<textMessages.length; i++){
+     console.log(textMessages[i]);
+ }
+
+var groceries = ['bread', 'eggs', 'water', 'bacon'];
+var x;
+
+for (x of groceries) {
+  console.log(x);
+}
+
+// The while loop loops through a block of code as long as a specified condition is true.
+var i = 0;
+while (i < 10) {
+    console.log("The number is " + i);
+    i++;
+  }
+// dowhile loop
+var i = 0;
+do {
+  console.log ("This number is " + i);
+  i++;
+}
+while (i < 5);
