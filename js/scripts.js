@@ -106,37 +106,35 @@ Note that this is not a variable. It is a keyword, and its value cannot be chang
 
 // Event Listeners
 var quote = document.querySelector("#quote"); 
-var prev= document.querySelector("#prev"); 
-var newquote = document.querySelector("#next");
+var prev = document.querySelector("#prev"); 
+var newQuote = document.querySelector("#next");
 var n = 0;
-var quotelist = [
+var quoteList = [
 "Slow progress is better than no progress", 
 "If you cannot accept it, change it. If you cannot change it, accept it", 
-"Your time is limited. So, don't waste it living some else's life", 
-"The bridge between dream and reality is work!!", "Everything is hard before it is easy", "Everybody likes a compliment", 
-"Never ever give up!!", "In this fast world, the best way to survive is not be emotionally atteched with anyone",
-"Never compare yourself with anybody. With this, you are insulting yourself", "Have a courage to follow your heart and intuition because they somehow already know what you truely want to be. Everything else is secondary", "Be emotionless", "Start small, do big", "Impossible, baby, is nothing", "Obsession is necessity", "Understand that you are an uncommon breed", "Kill your fear otherwise your fear will kill you", "Sometime life will throw a brick on your head. But, don't lose faith", "Be the best, \n, fuck the rest", "Smile! It confuses your enemy", "All will be willing to be your friend when you hve something they want", "They watch, /n They hate, /n They copy!", "The goal is not to live forever, it is to create that will"];
+"Your time is limited. So, don't waste it living some else's life" 
+];
 
-var backquote = quotelist.reverse; 
+var backquote = quoteList.reverse; 
 
-newquote.addEventListener("click", function(){
+// newQuote.addEventListener("click", function(){
 
-  if (n < 100) {
-  quote.textContent = quotelist[n];
-  n++;
-  } else {
-    quote.textContent = quotelist[n];
-    n = 0;}
-});
-prev.addEventListener("click", 
-                      function() { 
-  if (n<100) { 
-    quote.textContent = quotelist[n]; 
-    n--; } 
-  else { 
-    quote.textContent = quotelist[n]; 
-    n = 0;} 
-});
+//   if (n < 100) {
+//   quote.textContent = quoteList[n];
+//   n++;
+//   } else {
+//     quote.textContent = quoteList[n];
+//     n = 0;}
+// });
+// prev.addEventListener("click", 
+//                       function() { 
+//   if (n<100) { 
+//     quote.textContent = quoteList[n]; 
+//     n--; } 
+//   else { 
+//     quote.textContent = quoteList[n]; 
+//     n = 0;} 
+// });
 
 
 
@@ -170,3 +168,65 @@ do {
   i++;
 }
 while (i < 5);
+
+// Built-in Objects: date, math, string, array
+
+// example of the date object
+var today = Date();
+console.log("Today's date is: " + today);
+
+var dt = new Date("January 7, 2020");
+console.log("getDate() : " + dt.getDate() );
+console.log("getMonth() : " + dt.getMonth() );
+
+// exmaple of math object
+
+var value = Math.exp(5);
+console.log(value);
+
+var value2 = Math.round(0.5);
+console.log(value2);
+
+var value3 = Math.sqrt(25);
+console.log(value3);
+
+// try -4...is NaN = not a number
+
+// example of a string object
+
+// .length, .toUpperCase() 
+
+var str = new String('How long do you think this string is?');
+console.log(str.length);
+console.log(str.toUpperCase() );
+
+// Yes, it counts the spaces in between the words as characters
+
+// example of an array object
+
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+console.log(colors[0]);
+
+/**
+ * .pop: removes the last element from an array and returns that element
+ * .shift: removes the first element from an array and returns that element
+ * .push: Adds one or more elements to the end of an array and returns the new length of the array
+ * .reverse: reverses the order of the elements of an array
+ */
+
+ var time = 8;
+
+ var str = "hello my name is Nikki";
+
+ var cars = [911, 'ford f150', 'm3', 'gtr'];
+
+ let person = {
+   name: "Nikki",
+   age: 31,
+   hair: "brown",
+   eyes: "brown"
+ };
+ console.log(person.name);
+
+
+
