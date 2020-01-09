@@ -5,7 +5,7 @@ body {
   }
   .container {
     display: block;
-    width: 400px;
+    width: 420px;
     margin: 100px auto 0;
     border: 5px solid palevioletred;
     border-radius: 10px;
@@ -81,6 +81,7 @@ body {
       border-radius: 5px;
       background-color: white;
       color: pink;
+      font-size: 24px;
   }
   
   /* New Task */
@@ -118,6 +119,7 @@ body {
   li >  input[type="text"] {
     width: 226px;
   }
+
   li > .delete:hover {
     color: darkred;
   }

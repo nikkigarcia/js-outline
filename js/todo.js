@@ -1,5 +1,3 @@
-//Event handling, uder interaction is what starts the code execution.
-
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
@@ -32,11 +30,13 @@ var createNewTaskElement=function(taskString){
 	editButton.innerText="Edit";//innerText encodes special characters, HTML does not.
 	editButton.className="edit";
 	deleteButton.innerText="Delete";
+	// creating a class in html called delete class="delete"
 	deleteButton.className="delete";
 
 
 
-	//and appending.
+	//and appending 
+	// which allows the elements we create to appear on your web page or app
 	listItem.appendChild(checkBox);
 	listItem.appendChild(label);
 	listItem.appendChild(editInput);
@@ -46,21 +46,23 @@ var createNewTaskElement=function(taskString){
 }
 
 
-
 var addTask=function(){
 	console.log("Add Task...");
 	//Create a new list item with the text from the #new-task:
 	var listItem=createNewTaskElement(taskInput.value);
 
 	//Append listItem to incompleteTaskHolder
+	console.log(listItem);
+	
 	incompleteTaskHolder.appendChild(listItem);
 	bindTaskEvents(listItem, taskCompleted);
 
 	taskInput.value="";
 
+
 }
 
-//Edit an existing task.
+//Edit an existing task
 
 var editTask=function(){
 console.log("Edit Task...");
@@ -83,13 +85,14 @@ var containsClass=listItem.classList.contains("editMode");
 		}
 
 		//toggle .editmode on the parent.
+		// This method toggles between hide and show for the selected element
 		listItem.classList.toggle("editMode");
 }
 
 
 
 
-//Delete task.
+//Delete task
 var deleteTask=function(){
 		console.log("Delete Task...");
 
@@ -108,7 +111,8 @@ var taskCompleted=function(){
 	//Append the task list item to the #completed-tasks
 	var listItem=this.parentNode;
 	completedTasksHolder.appendChild(listItem);
-				bindTaskEvents(listItem, taskIncomplete);
+			bindTaskEvents(listItem, taskIncomplete);
+			// bind lets you pass in what object the this keyword will resolve to in the body of the function
 
 }
 
@@ -119,7 +123,7 @@ var taskIncomplete=function(){
 	//When the checkbox is unchecked
 		//Append the task list item to the #incomplete-tasks.
 		var listItem=this.parentNode;
-	incompleteTaskHolder.appendChild(listItem);
+		incompleteTaskHolder.appendChild(listItem);
 			bindTaskEvents(listItem,taskCompleted);
 }
 
@@ -128,12 +132,12 @@ var taskIncomplete=function(){
 var ajaxRequest=function(){
 	console.log("AJAX Request");
 }
+// https://www.youtube.com/watch?v=FVEtgUNVhGk
 
-//The glue to hold it all together.
 
 
-//Set the click handler to the addTask function.
-addButton.onclick=addTask;
+//Set the click handler to the addTask function
+// addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
@@ -167,10 +171,11 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 
 //cycle over completedTasksHolder ul list items
 	for (var i=0; i<completedTasksHolder.children.length;i++){
-	//bind events to list items chldren(tasksIncompleted)
+	//bind events to list items children(tasksIncompleted)
 		bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
     }
-    
+	// Done!
+	
     // const checkKeyCode = (e) => {
     //     if(e.keyCode === 13) handleSearch()
     // }
@@ -181,3 +186,10 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     //   input.removeEventListener("keydown", checkKeyCode)
     // })
   
+	//submit form when 'Enter' key is pressed while in myInputID
+// document.getElementById("new-task").addEventListener("keyup", function(event) {
+//     if (event.keyCode === 13) {
+//     	document.getElementById("new-task").submit();
+// 		return false;
+//     }
+// });
