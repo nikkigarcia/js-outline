@@ -1,3 +1,5 @@
+
+
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
@@ -33,8 +35,6 @@ var createNewTaskElement=function(taskString){
 	// creating a class in html called delete class="delete"
 	deleteButton.className="delete";
 
-
-
 	//and appending 
 	// which allows the elements we create to appear on your web page or app
 	listItem.appendChild(checkBox);
@@ -58,7 +58,6 @@ var addTask=function(){
 	bindTaskEvents(listItem, taskCompleted);
 
 	taskInput.value="";
-
 
 }
 
@@ -88,9 +87,6 @@ var containsClass=listItem.classList.contains("editMode");
 		// This method toggles between hide and show for the selected element
 		listItem.classList.toggle("editMode");
 }
-
-
-
 
 //Delete task
 var deleteTask=function(){
@@ -126,8 +122,6 @@ var taskIncomplete=function(){
 		incompleteTaskHolder.appendChild(listItem);
 			bindTaskEvents(listItem,taskCompleted);
 }
-
-
 
 var ajaxRequest=function(){
 	console.log("AJAX Request");
@@ -193,3 +187,17 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 // 		return false;
 //     }
 // });
+
+function myAlertFunction() {
+	alert("Are you sure you want to delete this item?");
+  }
+// end alert method
+
+// prompt method
+  function myPFunction() {
+	var human = prompt("Please enter your name");
+	if (human != null) {
+	  document.getElementById("demo").innerHTML =
+	  "Hello " + human + "! How are you today?";
+	}
+  }

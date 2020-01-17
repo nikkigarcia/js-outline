@@ -117,4 +117,17 @@ p{
   #quote { 
       color: aqua;
 }
-  
+#alert{
+    color: black;
+    background-color: #8FDE12;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 24px;
+}
+.ask{
+    text-align: center;
+}
+#demo{
+    text-align: center;
+    font-size: 50px;
+}
